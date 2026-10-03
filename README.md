@@ -40,6 +40,17 @@
 
 ## 为什么停在这里：公开前沿在一堵硬件墙后面
 
+> ### ⚠️ 这一整节在 2026-10-03 被更正了
+>
+> **"硬件墙"的承重那一句——"我们的账号只配 2×T4"——是错的。**
+>
+> 真相是：**CLI push 这条路径根本申请不到现代加速器**，它会把请求静默替换成默认卡；
+> 而 **RTX Pro 6000 是通过 notebook 编辑器 UI 分配的**（这正是 Tufa Labs 那句
+> *"you will have to manually select the proper GPU"* 的意思）。
+>
+> 我们全程用 CLI 推送，于是把**一条路径的失败**读成了**账号的天花板**。
+> 详见 **[F46](findings/F46-accelerator-push-path.md)**。下面的内容作为**当时**的记录保留。
+
 ### 公开生态基本只有一种方法（200 个内核的普查）
 
 | 家族 | 内核数 |
@@ -98,6 +109,7 @@
 | [`findings/FINDINGS.md`](findings/FINDINGS.md) | **主台账 F1–F43**（约 1900 行）：环境勘测、度量 harness、逐关学习器、十几次证伪 |
 | [`findings/F44-hardware-wall.md`](findings/F44-hardware-wall.md) | 六道闸门的完整证据链，以及**为什么这次每个探针都跑在建东西之前** |
 | [`findings/F45-what-others-do.md`](findings/F45-what-others-do.md) | 200 个公开内核的方法普查 + 非-Duck 作品的硬件实测 |
+| [`findings/F46-accelerator-push-path.md`](findings/F46-accelerator-push-path.md) | ⚠️ **对 F44 的更正**：CLI push 路径申请不到现代加速器，RTX Pro 6000 只能在编辑器 UI 里选 |
 | [`findings/metric-harness-notes.md`](findings/metric-harness-notes.md) | 离线复刻比赛度量的记录 |
 | [`STATUS.md`](STATUS.md) | 当时的运行状态 |
 
@@ -142,9 +154,16 @@ leaderboard/   三份公榜快照（三个时间戳，CSV）
 
 ## 还剩下什么
 
-1. **唯一没测过的路：绕开 vLLM 走 `llama.cpp`。** TAAF bundle 自带 `configs/inference.local.llama.json`，说明 harness 有这个后端，而 **GGUF Q4 在 Turing 上能跑**。代价是换 GGUF 量化模型 + 打补丁绕过 harness 那句 GPU 断言。**它有真实的机会死在 harness 的别的假设上。**
-2. **`mbmmurad` 那个 "LB 0.86 (3rd place candidate)"** —— 唯一不用 Qwen、不用 Duck 的自称高位作品（Gemma-4 31B），且挂载列表为空。值得弄清是哪个 milestone、什么量纲。
-3. **如果哪天能拿到 Blackwell 级硬件**，F42/F43 里的公开配方是全的（数据集、模型 ref、harness、服务配置、gateway 细节），可以照着复现。
+1. ⭐ **先在浏览器里验证一件事**（CLI 做不到）：在 Kaggle 编辑器打开 notebook →
+   Settings → Accelerator → **RTX Pro 6000** → Save & Run All，跑一个只打印 `nvidia-smi`
+   的最小 notebook。**在亲眼看到一次 sm_120 的卡之前，F44 的结论不算被推翻、F46 的结论也不算被证实。**
+   （`kaggle kernels pull` 回来的 `machine_shape` 只反映最后一次 API push，与 UI 当前选择无关 —— 见 [kaggle-cli #1196](https://github.com/Kaggle/kaggle-cli/issues/1196)。）
+2. **若第 1 步成立**：F42/F43 里记的公开配方是全的（数据集、模型 ref、harness、服务配置、gateway 细节），
+   且 F44 的闸门 2–5 全部只在 T4 上成立、会**自动消失**（FP8 要 cc≥8.9、flashinfer 要 sm_80+、
+   vLLM 链 CUDA 13 —— 换到 sm_120 都不是问题）。
+3. **若第 1 步不成立**：才回到 F44，走唯一没测过的路 —— 绕开 vLLM 用 `llama.cpp`
+   （TAAF bundle 自带 `configs/inference.local.llama.json`，GGUF Q4 在 Turing 上能跑）。
+4. **`mbmmurad` 那个 "LB 0.86 (3rd place candidate)"** —— 唯一不用 Qwen、不用 Duck 的自称高位作品（Gemma-4 31B），且挂载列表为空。值得弄清是哪个 milestone、什么量纲。
 
 ---
 

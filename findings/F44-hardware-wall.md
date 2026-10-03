@@ -1,5 +1,18 @@
 # F44. ⛔ "Serve an LLM on Kaggle T4" is CLOSED — six independent gates, all measured
 
+> ## ⚠️ 更正 2026-10-03：闸门 1 是错的，而它正是承重的那一道
+>
+> 见 **[F46](F46-accelerator-push-path.md)**。
+>
+> 下文中**关于 T4 的一切都是实测的、准确的**。错的是从闸门 1 推出的那个结论 ——
+> **"我们的账号只被授予 2×T4"**。
+>
+> 正确的读法：**CLI push 这条路径**会静默替换成默认卡，所以 `machine_shape`
+> **根本无法表达**"我要 RTX Pro 6000"这个请求。那张卡是通过 **notebook 编辑器 UI** 分配的。
+>
+> 闸门 2–6 是真的，但它们**只在 T4 上成立**，换到 sm_120 的卡上会全部消失。
+> 原文保留不改，作为记录。
+
 Written 2026-10-04. Three GPU probe kernels were pushed, run, read and deleted to settle this
 (`work/probe-gpu/`, `work/probe-vllm/`, `work/probe-vllm2/`, `work/probe-vllm3/`). Each probe was
 built to answer one question and to be able to veto the whole line, so the answer arrived **before**

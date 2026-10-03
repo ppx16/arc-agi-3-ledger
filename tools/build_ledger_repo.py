@@ -12,7 +12,7 @@ WHY A CURATED COPY
     everything it refuses, so the content boundary is auditable.
 
 WHAT ACTUALLY BELONGS HERE (all of it is ours)
-    * `FINDINGS.md` (F1-F43) + `FINDINGS-F44.md` + `FINDINGS-F45.md` -- the ledger itself;
+    * `FINDINGS.md` (F1-F43) + `FINDINGS-F44.md` + `FINDINGS-F45.md` + `FINDINGS-F46.md` -- the ledger itself;
     * `STATUS.md`, `cm.txt` -- the running state and the metric-harness notes;
     * `agents/` -- the nine agents this project wrote (goose, goose-no-level-reset, hybrid,
       portfolio, novelty, cycle, planner, generic);
@@ -58,6 +58,10 @@ DROP_SUBTREES = ["work/duck9", "work/nonduck", "work/pub_arc",
                  "work/lb",
                  # 65 zero-byte placeholder logs, no content
                  "tools/runs",
+                 # ⚠️ never copy: a whole pip-installed venv + a downloaded wheel tree, and the
+                 # captured probe log that once contained live kernel JWTs (now scrubbed, but the
+                 # safe rule is to keep accelerator-probe output out of the published tree).
+                 "work/kgvenv", "work/kgcli", "work/probe-nb-out",
                  "tools/__pycache__", "work/__pycache__"]
 
 # our own top-level files, mapped to their destination path in the repo
@@ -65,6 +69,7 @@ ROOT_FILES: dict[str, str] = {
     "FINDINGS.md":            "findings/FINDINGS.md",
     "FINDINGS-F44.md":        "findings/F44-hardware-wall.md",
     "FINDINGS-F45.md":        "findings/F45-what-others-do.md",
+    "FINDINGS-F46.md":        "findings/F46-accelerator-push-path.md",
     "STATUS.md":              "STATUS.md",
     "cm.txt":                 "findings/metric-harness-notes.md",
     "build_hybrid.py":        "tools/build_hybrid.py",
