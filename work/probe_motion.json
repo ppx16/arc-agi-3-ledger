@@ -1,0 +1,3411 @@
+{
+ "ar25": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ],
+  "bg": 9,
+  "n_components": 11,
+  "component_sizes": [
+   189,
+   64,
+   63,
+   45,
+   45,
+   40,
+   1,
+   1
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 109,
+    "frac": 0.0266,
+    "bbox": [
+     0,
+     18,
+     23,
+     63
+    ],
+    "bbox_area": 1104,
+    "concentration": 0.099,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 109,
+    "frac": 0.0266,
+    "bbox": [
+     0,
+     18,
+     26,
+     63
+    ],
+    "bbox_area": 1242,
+    "concentration": 0.088,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 109,
+    "frac": 0.0266,
+    "bbox": [
+     0,
+     15,
+     23,
+     63
+    ],
+    "bbox_area": 1176,
+    "concentration": 0.093,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 109,
+    "frac": 0.0266,
+    "bbox": [
+     0,
+     18,
+     23,
+     63
+    ],
+    "bbox_area": 1104,
+    "concentration": 0.099,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@31,31",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@63,32",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@31,63",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@39,18",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@54,48",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@23,18",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@19,16",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@22,16",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "7",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 14,
+   "n_noop": 9,
+   "n_compact_change": 5,
+   "min_frac": 0.0002
+  }
+ },
+ "bp35": {
+  "available_actions": [
+   3,
+   4,
+   6,
+   7
+  ],
+  "bg": 5,
+  "n_components": 190,
+  "component_sizes": [
+   1529,
+   276,
+   64,
+   21,
+   21,
+   21,
+   21,
+   21
+  ],
+  "actions": [
+   {
+    "action": "3",
+    "changed": 47,
+    "frac": 0.0115,
+    "bbox": [
+     37,
+     0,
+     63,
+     23
+    ],
+    "bbox_area": 648,
+    "concentration": 0.073,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 47,
+    "frac": 0.0115,
+    "bbox": [
+     37,
+     0,
+     63,
+     29
+    ],
+    "bbox_area": 810,
+    "concentration": 0.058,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@33,42",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@42,6",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,63",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@15,3",
+    "changed": 26,
+    "frac": 0.0063,
+    "bbox": [
+     1,
+     0,
+     63,
+     17
+    ],
+    "bbox_area": 1134,
+    "concentration": 0.023,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@21,3",
+    "changed": 26,
+    "frac": 0.0063,
+    "bbox": [
+     1,
+     0,
+     63,
+     23
+    ],
+    "bbox_area": 1512,
+    "concentration": 0.017,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@27,3",
+    "changed": 31,
+    "frac": 0.0076,
+    "bbox": [
+     1,
+     0,
+     63,
+     30
+    ],
+    "bbox_area": 1953,
+    "concentration": 0.016,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@33,15",
+    "changed": 36,
+    "frac": 0.0088,
+    "bbox": [
+     12,
+     0,
+     63,
+     35
+    ],
+    "bbox_area": 1872,
+    "concentration": 0.019,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@39,15",
+    "changed": 36,
+    "frac": 0.0088,
+    "bbox": [
+     12,
+     0,
+     63,
+     41
+    ],
+    "bbox_area": 2184,
+    "concentration": 0.016,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "7",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 11,
+   "n_noop": 0,
+   "n_compact_change": 11,
+   "min_frac": 0.0002
+  }
+ },
+ "cd82": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "bg": 5,
+  "n_components": 13,
+  "component_sizes": [
+   359,
+   100,
+   84,
+   68,
+   64,
+   50,
+   50,
+   30
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 201,
+    "frac": 0.0491,
+    "bbox": [
+     21,
+     14,
+     63,
+     63
+    ],
+    "bbox_area": 2150,
+    "concentration": 0.093,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 201,
+    "frac": 0.0491,
+    "bbox": [
+     21,
+     25,
+     63,
+     63
+    ],
+    "bbox_area": 1677,
+    "concentration": 0.12,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 51,
+    "frac": 0.0125,
+    "bbox": [
+     34,
+     27,
+     63,
+     63
+    ],
+    "bbox_area": 1110,
+    "concentration": 0.046,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@41,4",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,38",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,28",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@12,12",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,63",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@8,5",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@8,10",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,26",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 13,
+   "n_noop": 0,
+   "n_compact_change": 13,
+   "min_frac": 0.0002
+  }
+ },
+ "cn04": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "bg": 10,
+  "n_components": 7,
+  "component_sizes": [
+   144,
+   135,
+   32,
+   9,
+   9,
+   9,
+   9
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 144,
+    "frac": 0.0352,
+    "bbox": [
+     8,
+     11,
+     28,
+     25
+    ],
+    "bbox_area": 315,
+    "concentration": 0.457,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 144,
+    "frac": 0.0352,
+    "bbox": [
+     11,
+     11,
+     31,
+     25
+    ],
+    "bbox_area": 315,
+    "concentration": 0.457,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 198,
+    "frac": 0.0483,
+    "bbox": [
+     11,
+     8,
+     28,
+     25
+    ],
+    "bbox_area": 324,
+    "concentration": 0.611,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 198,
+    "frac": 0.0483,
+    "bbox": [
+     11,
+     11,
+     28,
+     28
+    ],
+    "bbox_area": 324,
+    "concentration": 0.611,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 207,
+    "frac": 0.0505,
+    "bbox": [
+     11,
+     11,
+     28,
+     28
+    ],
+    "bbox_area": 324,
+    "concentration": 0.639,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@45,39",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@18,17",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,0",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@15,27",
+    "changed": 135,
+    "frac": 0.033,
+    "bbox": [
+     11,
+     11,
+     25,
+     25
+    ],
+    "bbox_area": 225,
+    "concentration": 0.6,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@21,27",
+    "changed": 135,
+    "frac": 0.033,
+    "bbox": [
+     11,
+     11,
+     25,
+     25
+    ],
+    "bbox_area": 225,
+    "concentration": 0.6,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@39,36",
+    "changed": 279,
+    "frac": 0.0681,
+    "bbox": [
+     11,
+     11,
+     49,
+     49
+    ],
+    "bbox_area": 1521,
+    "concentration": 0.183,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@39,42",
+    "changed": 279,
+    "frac": 0.0681,
+    "bbox": [
+     11,
+     11,
+     49,
+     49
+    ],
+    "bbox_area": 1521,
+    "concentration": 0.183,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 12,
+   "n_noop": 3,
+   "n_compact_change": 9,
+   "min_frac": 0.033
+  }
+ },
+ "dc22": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ],
+  "bg": 4,
+  "n_components": 35,
+  "component_sizes": [
+   1190,
+   640,
+   576,
+   64,
+   47,
+   47,
+   40,
+   40
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 9,
+    "frac": 0.0022,
+    "bbox": [
+     38,
+     0,
+     63,
+     11
+    ],
+    "bbox_area": 312,
+    "concentration": 0.029,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 9,
+    "frac": 0.0022,
+    "bbox": [
+     40,
+     0,
+     63,
+     11
+    ],
+    "bbox_area": 288,
+    "concentration": 0.031,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 9,
+    "frac": 0.0022,
+    "bbox": [
+     40,
+     0,
+     63,
+     11
+    ],
+    "bbox_area": 288,
+    "concentration": 0.031,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 9,
+    "frac": 0.0022,
+    "bbox": [
+     40,
+     0,
+     63,
+     13
+    ],
+    "bbox_area": 336,
+    "concentration": 0.027,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@48,32",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,4",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,58",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,63",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@48,19",
+    "changed": 129,
+    "frac": 0.0315,
+    "bbox": [
+     16,
+     0,
+     63,
+     55
+    ],
+    "bbox_area": 2688,
+    "concentration": 0.048,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@48,36",
+    "changed": 97,
+    "frac": 0.0237,
+    "bbox": [
+     16,
+     0,
+     63,
+     55
+    ],
+    "bbox_area": 2688,
+    "concentration": 0.036,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@24,20",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@10,40",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     0,
+     63,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 12,
+   "n_noop": 0,
+   "n_compact_change": 12,
+   "min_frac": 0.0002
+  }
+ },
+ "ft09": {
+  "available_actions": [
+   6
+  ],
+  "bg": 5,
+  "n_components": 64,
+  "component_sizes": [
+   496,
+   64,
+   36,
+   36,
+   36,
+   36,
+   36,
+   36
+  ],
+  "actions": [
+   {
+    "action": "6@46,46",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,63",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@14,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@48,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@6,12",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@40,12",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@56,12",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@14,20",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 8,
+   "n_noop": 8,
+   "n_compact_change": 0,
+   "min_frac": null
+  }
+ },
+ "g50t": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "bg": 0,
+  "n_components": 10,
+  "component_sizes": [
+   879,
+   82,
+   64,
+   24,
+   19,
+   9,
+   8,
+   3
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "2",
+    "changed": 48,
+    "frac": 0.0117,
+    "bbox": [
+     8,
+     14,
+     18,
+     18
+    ],
+    "bbox_area": 55,
+    "concentration": 0.873,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "4",
+    "changed": 48,
+    "frac": 0.0117,
+    "bbox": [
+     8,
+     14,
+     12,
+     24
+    ],
+    "bbox_area": 55,
+    "concentration": 0.873,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 5,
+   "n_noop": 3,
+   "n_compact_change": 2,
+   "min_frac": 0.0117
+  }
+ },
+ "ka59": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ],
+  "bg": 2,
+  "n_components": 13,
+  "component_sizes": [
+   290,
+   290,
+   126,
+   64,
+   16,
+   16,
+   9,
+   9
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 19,
+    "frac": 0.0046,
+    "bbox": [
+     27,
+     18,
+     63,
+     63
+    ],
+    "bbox_area": 1702,
+    "concentration": 0.011,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 19,
+    "frac": 0.0046,
+    "bbox": [
+     30,
+     18,
+     63,
+     63
+    ],
+    "bbox_area": 1564,
+    "concentration": 0.012,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 19,
+    "frac": 0.0046,
+    "bbox": [
+     30,
+     15,
+     63,
+     63
+    ],
+    "bbox_area": 1666,
+    "concentration": 0.011,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 19,
+    "frac": 0.0046,
+    "bbox": [
+     30,
+     18,
+     63,
+     63
+    ],
+    "bbox_area": 1564,
+    "concentration": 0.012,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@16,31",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@46,31",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@36,31",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,63",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@46,28",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@13,34",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@31,31",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@19,31",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 12,
+   "n_noop": 0,
+   "n_compact_change": 12,
+   "min_frac": 0.0002
+  }
+ },
+ "lf52": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7
+  ],
+  "bg": 10,
+  "n_components": 58,
+  "component_sizes": [
+   660,
+   172,
+   64,
+   63,
+   23,
+   16,
+   16,
+   16
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@35,27",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@34,28",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,0",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@50,39",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@21,30",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@12,14",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@18,14",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@24,14",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "7",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 13,
+   "n_noop": 0,
+   "n_compact_change": 13,
+   "min_frac": 0.0002
+  }
+ },
+ "lp85": {
+  "available_actions": [
+   6
+  ],
+  "bg": 4,
+  "n_components": 37,
+  "component_sizes": [
+   819,
+   787,
+   64,
+   40,
+   40,
+   16,
+   16,
+   16
+  ],
+  "actions": [
+   {
+    "action": "6@32,57",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,6",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@0,32",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@5,32",
+    "changed": 293,
+    "frac": 0.0715,
+    "bbox": [
+     0,
+     0,
+     46,
+     51
+    ],
+    "bbox_area": 2444,
+    "concentration": 0.12,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@58,32",
+    "changed": 293,
+    "frac": 0.0715,
+    "bbox": [
+     0,
+     0,
+     46,
+     51
+    ],
+    "bbox_area": 2444,
+    "concentration": 0.12,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@14,20",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@14,44",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@20,44",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 8,
+   "n_noop": 6,
+   "n_compact_change": 2,
+   "min_frac": 0.0715
+  }
+ },
+ "ls20": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "bg": 4,
+  "n_components": 18,
+  "component_sizes": [
+   892,
+   208,
+   112,
+   84,
+   76,
+   43,
+   20,
+   15
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 52,
+    "frac": 0.0127,
+    "bbox": [
+     40,
+     13,
+     62,
+     38
+    ],
+    "bbox_area": 598,
+    "concentration": 0.087,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     61,
+     13,
+     62,
+     13
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 52,
+    "frac": 0.0127,
+    "bbox": [
+     45,
+     13,
+     62,
+     38
+    ],
+    "bbox_area": 468,
+    "concentration": 0.111,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 52,
+    "frac": 0.0127,
+    "bbox": [
+     45,
+     13,
+     62,
+     43
+    ],
+    "bbox_area": 558,
+    "concentration": 0.093,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 4,
+   "n_noop": 0,
+   "n_compact_change": 4,
+   "min_frac": 0.0005
+  }
+ },
+ "m0r0": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "bg": 5,
+  "n_components": 4,
+  "component_sizes": [
+   1299,
+   1294,
+   25,
+   25
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 100,
+    "frac": 0.0244,
+    "bbox": [
+     44,
+     19,
+     53,
+     43
+    ],
+    "bbox_area": 250,
+    "concentration": 0.4,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 100,
+    "frac": 0.0244,
+    "bbox": [
+     49,
+     19,
+     58,
+     43
+    ],
+    "bbox_area": 250,
+    "concentration": 0.4,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 100,
+    "frac": 0.0244,
+    "bbox": [
+     49,
+     14,
+     53,
+     48
+    ],
+    "bbox_area": 175,
+    "concentration": 0.571,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 100,
+    "frac": 0.0244,
+    "bbox": [
+     49,
+     19,
+     53,
+     43
+    ],
+    "bbox_area": 125,
+    "concentration": 0.8,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@49,30",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@14,29",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@21,51",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@41,51",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 9,
+   "n_noop": 5,
+   "n_compact_change": 4,
+   "min_frac": 0.0244
+  }
+ },
+ "r11l": {
+  "available_actions": [
+   6
+  ],
+  "bg": 5,
+  "n_components": 37,
+  "component_sizes": [
+   240,
+   227,
+   134,
+   64,
+   37,
+   20,
+   12,
+   12
+  ],
+  "actions": [
+   {
+    "action": "6@24,2",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@54,58",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@59,7",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@0,32",
+    "changed": 88,
+    "frac": 0.0215,
+    "bbox": [
+     0,
+     0,
+     56,
+     25
+    ],
+    "bbox_area": 1482,
+    "concentration": 0.059,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@3,60",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@17,47",
+    "changed": 66,
+    "frac": 0.0161,
+    "bbox": [
+     0,
+     0,
+     55,
+     24
+    ],
+    "bbox_area": 1400,
+    "concentration": 0.047,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@7,36",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@27,59",
+    "changed": 25,
+    "frac": 0.0061,
+    "bbox": [
+     0,
+     0,
+     61,
+     29
+    ],
+    "bbox_area": 1860,
+    "concentration": 0.013,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 8,
+   "n_noop": 0,
+   "n_compact_change": 8,
+   "min_frac": 0.0002
+  }
+ },
+ "re86": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "bg": 5,
+  "n_components": 23,
+  "component_sizes": [
+   64,
+   45,
+   13,
+   13,
+   13,
+   13,
+   8,
+   8
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 61,
+    "frac": 0.0149,
+    "bbox": [
+     29,
+     23,
+     63,
+     63
+    ],
+    "bbox_area": 1435,
+    "concentration": 0.043,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 61,
+    "frac": 0.0149,
+    "bbox": [
+     32,
+     23,
+     63,
+     63
+    ],
+    "bbox_area": 1312,
+    "concentration": 0.046,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 61,
+    "frac": 0.0149,
+    "bbox": [
+     32,
+     20,
+     63,
+     63
+    ],
+    "bbox_area": 1408,
+    "concentration": 0.043,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 61,
+    "frac": 0.0149,
+    "bbox": [
+     32,
+     23,
+     63,
+     63
+    ],
+    "bbox_area": 1312,
+    "concentration": 0.046,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 3,
+    "frac": 0.0007,
+    "bbox": [
+     27,
+     21,
+     63,
+     63
+    ],
+    "bbox_area": 1591,
+    "concentration": 0.002,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 5,
+   "n_noop": 0,
+   "n_compact_change": 5,
+   "min_frac": 0.0007
+  }
+ },
+ "s5i5": {
+  "available_actions": [
+   6
+  ],
+  "bg": 5,
+  "n_components": 27,
+  "component_sizes": [
+   64,
+   36,
+   36,
+   23,
+   18,
+   18,
+   18,
+   18
+  ],
+  "actions": [
+   {
+    "action": "6@32,63",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@42,21",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@24,41",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@10,31",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@39,21",
+    "changed": 11,
+    "frac": 0.0027,
+    "bbox": [
+     9,
+     28,
+     63,
+     63
+    ],
+    "bbox_area": 1980,
+    "concentration": 0.006,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@45,21",
+    "changed": 11,
+    "frac": 0.0027,
+    "bbox": [
+     9,
+     31,
+     63,
+     63
+    ],
+    "bbox_area": 1815,
+    "concentration": 0.006,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@24,38",
+    "changed": 11,
+    "frac": 0.0027,
+    "bbox": [
+     31,
+     9,
+     63,
+     63
+    ],
+    "bbox_area": 1815,
+    "concentration": 0.006,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@24,44",
+    "changed": 11,
+    "frac": 0.0027,
+    "bbox": [
+     34,
+     9,
+     63,
+     63
+    ],
+    "bbox_area": 1650,
+    "concentration": 0.007,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 8,
+   "n_noop": 0,
+   "n_compact_change": 8,
+   "min_frac": 0.0002
+  }
+ },
+ "sb26": {
+  "available_actions": [
+   5,
+   6,
+   7
+  ],
+  "bg": 4,
+  "n_components": 23,
+  "component_sizes": [
+   88,
+   72,
+   64,
+   20,
+   20,
+   20,
+   20,
+   16
+  ],
+  "actions": [
+   {
+    "action": "5",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     53,
+     63,
+     53,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@31,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,30",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,53",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@20,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@34,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@28,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@42,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@36,58",
+    "changed": 20,
+    "frac": 0.0049,
+    "bbox": [
+     56,
+     33,
+     61,
+     38
+    ],
+    "bbox_area": 36,
+    "concentration": 0.556,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "7",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 10,
+   "n_noop": 8,
+   "n_compact_change": 2,
+   "min_frac": 0.0002
+  }
+ },
+ "sc25": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   6
+  ],
+  "bg": 5,
+  "n_components": 22,
+  "component_sizes": [
+   208,
+   128,
+   76,
+   48,
+   36,
+   16,
+   14,
+   9
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "2",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "3",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@30,55",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@62,32",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@29,20",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@16,54",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@14,20",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@13,20",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@30,50",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@25,55",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 12,
+   "n_noop": 12,
+   "n_compact_change": 0,
+   "min_frac": null
+  }
+ },
+ "sk48": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   6,
+   7
+  ],
+  "bg": 5,
+  "n_components": 45,
+  "component_sizes": [
+   840,
+   544,
+   64,
+   18,
+   18,
+   16,
+   16,
+   16
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 96,
+    "frac": 0.0234,
+    "bbox": [
+     30,
+     11,
+     41,
+     22
+    ],
+    "bbox_area": 144,
+    "concentration": 0.667,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "3",
+    "changed": 12,
+    "frac": 0.0029,
+    "bbox": [
+     38,
+     17,
+     39,
+     22
+    ],
+    "bbox_area": 12,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 12,
+    "frac": 0.0029,
+    "bbox": [
+     38,
+     23,
+     39,
+     28
+    ],
+    "bbox_area": 12,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@31,26",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,58",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,53",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@13,38",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@22,58",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@44,20",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@28,58",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@44,26",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "7",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 13,
+   "n_noop": 10,
+   "n_compact_change": 3,
+   "min_frac": 0.0029
+  }
+ },
+ "sp80": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "bg": 12,
+  "n_components": 7,
+  "component_sizes": [
+   256,
+   80,
+   80,
+   80,
+   64,
+   16,
+   12
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 162,
+    "frac": 0.0396,
+    "bbox": [
+     0,
+     12,
+     19,
+     63
+    ],
+    "bbox_area": 1040,
+    "concentration": 0.156,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 162,
+    "frac": 0.0396,
+    "bbox": [
+     0,
+     12,
+     23,
+     63
+    ],
+    "bbox_area": 1248,
+    "concentration": 0.13,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 34,
+    "frac": 0.0083,
+    "bbox": [
+     0,
+     8,
+     19,
+     63
+    ],
+    "bbox_area": 1120,
+    "concentration": 0.03,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 34,
+    "frac": 0.0083,
+    "bbox": [
+     0,
+     12,
+     19,
+     63
+    ],
+    "bbox_area": 1040,
+    "concentration": 0.033,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,62",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@22,18",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@22,56",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@46,56",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,0",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@38,6",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@38,2",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     0,
+     62,
+     0,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 12,
+   "n_noop": 0,
+   "n_compact_change": 12,
+   "min_frac": 0.0005
+  }
+ },
+ "su15": {
+  "available_actions": [
+   6,
+   7
+  ],
+  "bg": 5,
+  "n_components": 27,
+  "component_sizes": [
+   631,
+   64,
+   59,
+   9,
+   9,
+   9,
+   5,
+   1
+  ],
+  "actions": [
+   {
+    "action": "6@32,4",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@32,63",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@48,15",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     63,
+     62,
+     63,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@31,5",
+    "changed": 0,
+    "noop": true
+   },
+   {
+    "action": "6@4,59",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     63,
+     62,
+     63,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@10,53",
+    "changed": 20,
+    "frac": 0.0049,
+    "bbox": [
+     52,
+     3,
+     63,
+     63
+    ],
+    "bbox_area": 732,
+    "concentration": 0.027,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@46,17",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     63,
+     62,
+     63,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@44,19",
+    "changed": 2,
+    "frac": 0.0005,
+    "bbox": [
+     63,
+     62,
+     63,
+     63
+    ],
+    "bbox_area": 2,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "7",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 9,
+   "n_noop": 4,
+   "n_compact_change": 5,
+   "min_frac": 0.0005
+  }
+ },
+ "tn36": {
+  "available_actions": [
+   6
+  ],
+  "bg": 5,
+  "n_components": 47,
+  "component_sizes": [
+   353,
+   69,
+   61,
+   16,
+   16,
+   16,
+   16,
+   16
+  ],
+  "actions": [
+   {
+    "action": "6@32,37",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@36,55",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@31,1",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@20,10",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@28,10",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@36,10",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@44,10",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@16,14",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     1,
+     61,
+     1,
+     61
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 8,
+   "n_noop": 0,
+   "n_compact_change": 8,
+   "min_frac": 0.0002
+  }
+ },
+ "tr87": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "bg": 2,
+  "n_components": 63,
+  "component_sizes": [
+   1352,
+   180,
+   141,
+   64,
+   38,
+   38,
+   36,
+   34
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 13,
+    "frac": 0.0032,
+    "bbox": [
+     52,
+     15,
+     56,
+     19
+    ],
+    "bbox_area": 25,
+    "concentration": 0.52,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 15,
+    "frac": 0.0037,
+    "bbox": [
+     53,
+     15,
+     56,
+     18
+    ],
+    "bbox_area": 16,
+    "concentration": 0.938,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 28,
+    "frac": 0.0068,
+    "bbox": [
+     48,
+     15,
+     60,
+     47
+    ],
+    "bbox_area": 429,
+    "concentration": 0.065,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 28,
+    "frac": 0.0068,
+    "bbox": [
+     48,
+     15,
+     60,
+     26
+    ],
+    "bbox_area": 156,
+    "concentration": 0.179,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 4,
+   "n_noop": 0,
+   "n_compact_change": 4,
+   "min_frac": 0.0032
+  }
+ },
+ "tu93": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4
+  ],
+  "bg": 5,
+  "n_components": 65,
+  "component_sizes": [
+   64,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9,
+   9
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     63,
+     63,
+     63,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 19,
+    "frac": 0.0046,
+    "bbox": [
+     15,
+     15,
+     63,
+     63
+    ],
+    "bbox_area": 2401,
+    "concentration": 0.008,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 4,
+   "n_noop": 0,
+   "n_compact_change": 4,
+   "min_frac": 0.0002
+  }
+ },
+ "vc33": {
+  "available_actions": [
+   6
+  ],
+  "bg": 3,
+  "n_components": 10,
+  "component_sizes": [
+   848,
+   368,
+   96,
+   72,
+   64,
+   16,
+   16,
+   16
+  ],
+  "actions": [
+   {
+    "action": "6@47,14",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@57,48",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@52,30",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@28,30",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@32,0",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@48,46",
+    "changed": 1,
+    "frac": 0.0002,
+    "bbox": [
+     0,
+     63,
+     0,
+     63
+    ],
+    "bbox_area": 1,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@62,26",
+    "changed": 265,
+    "frac": 0.0647,
+    "bbox": [
+     0,
+     28,
+     63,
+     63
+    ],
+    "bbox_area": 2304,
+    "concentration": 0.115,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "6@62,34",
+    "changed": 265,
+    "frac": 0.0647,
+    "bbox": [
+     0,
+     32,
+     63,
+     63
+    ],
+    "bbox_area": 2048,
+    "concentration": 0.129,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   }
+  ],
+  "summary": {
+   "n_candidates": 8,
+   "n_noop": 0,
+   "n_compact_change": 8,
+   "min_frac": 0.0002
+  }
+ },
+ "wa30": {
+  "available_actions": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ],
+  "bg": 1,
+  "n_components": 11,
+  "component_sizes": [
+   64,
+   28,
+   20,
+   12,
+   12,
+   12,
+   12,
+   4
+  ],
+  "actions": [
+   {
+    "action": "1",
+    "changed": 32,
+    "frac": 0.0078,
+    "bbox": [
+     44,
+     32,
+     51,
+     35
+    ],
+    "bbox_area": 32,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "2",
+    "changed": 32,
+    "frac": 0.0078,
+    "bbox": [
+     48,
+     32,
+     55,
+     35
+    ],
+    "bbox_area": 32,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "3",
+    "changed": 32,
+    "frac": 0.0078,
+    "bbox": [
+     48,
+     28,
+     51,
+     35
+    ],
+    "bbox_area": 32,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "4",
+    "changed": 32,
+    "frac": 0.0078,
+    "bbox": [
+     48,
+     32,
+     51,
+     39
+    ],
+    "bbox_area": 32,
+    "concentration": 1.0,
+    "state": "GameState.NOT_FINISHED",
+    "levels": 0
+   },
+   {
+    "action": "5",
+    "changed": 0,
+    "noop": true
+   }
+  ],
+  "summary": {
+   "n_candidates": 5,
+   "n_noop": 1,
+   "n_compact_change": 4,
+   "min_frac": 0.0078
+  }
+ }
+}

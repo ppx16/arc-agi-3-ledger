@@ -1,0 +1,18 @@
+{
+  "id": "ppxl16/arc-vllm-t4-probe3",
+  "title": "arc vllm t4 probe3",
+  "code_file": "probe.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [
+    "saltb0x/arc3-vllm-wheelhouse-v0271-cu129",
+    "dominic789654/arc-vllm026",
+    "mirzamilanfarabi/arc3-vllm-h100-wheelhouse-v3"
+  ],
+  "competition_sources": [],
+  "kernel_sources": []
+}

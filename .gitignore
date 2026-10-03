@@ -1,0 +1,28 @@
+# Normalise line endings so the repo is byte-stable across platforms.
+* text=auto eol=lf
+*.ipynb text eol=lf
+*.png binary
+*.zip binary
+
+# --- things that must never be published from this project -------------------
+# Vendored dependency trees pulled in by the competition starter. They are not ours and they are
+# ~1 GB (187 MB of .pyc alone).
+starter/
+research/openworld/
+
+# Competition data.
+comp/
+data/
+*.zip
+
+# Third-party material: notebooks pulled from Kaggle while surveying the field. Their *findings*
+# are recorded in our own words in findings/F45-what-others-do.md; the works themselves are not
+# redistributed here.
+work/duck9/
+work/nonduck/
+work/pub_arc/
+
+# Bytecode / caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/

@@ -1,0 +1,32 @@
+ARC-AGI-3 F32/F33: the hybrid regressed to 0.14 against the goose's 0.18, and the board did not move
+
+Read the two submissions. 56641359 (StochasticGoose baseline) = 0.18; 56666561 (hybrid: planner first,
+goose fallback) = 0.14. The hybrid is 0.04 WORSE than the baseline it was layered on top of.
+
+That is the outcome F28 named and then chose to test anyway, so the record should say which way it
+went: on the hidden set the planner's rules COST score. Mechanistically: the planner was verified on
+one level of one public game (LS20 L1, F19) and the rerun plays a hidden set (F23), so its rule chain
+fires on whatever happens to match the pattern and emits a confident wrong plan -- and an agent that
+spends its first 13-37 actions executing a wrong plan is worse than one that spends them exploring.
+F22's own warning ("a plan was produced" is not "the plan works") is the precise failure. The planner
+line is now CLOSED on measurement, so anything further has to beat 0.18 with a mechanism that is not
+game-specific.
+
+Then read the public leaderboard directly to check whether the regression displaced our score, because
+kernels/submissions expose no "selected" field. It did not:
+
+    Rank 2357   p pxl16   LastSubmission 2026-09-29 07:08:37   Score 0.18   SubmissionCount 2
+
+The board is scoring our BETTER submission, not the newest, so the 0.14 cost us nothing publicly and
+no action is needed now. That also verifies, rather than assumes, the safety property we were relying
+on for this competition. Rank 2357/3477; top 45.33 (Tufa Labs, 149 submissions).
+
+Side finding worth keeping: the leaderboard zip entry is named
+arc-prize-2026-arc-agi-3-publicleaderboard-<ISO timestamp>.csv, and Expand-Archive cannot create a
+filename containing a colon -- it fails with a message that reads like a corrupt archive. Python's
+zipfile reads it fine. Same class of Windows-specific trap as the GBK codec and the .NET-vs-PowerShell
+cwd mismatch.
+
+One action remains for the user before 2026-11-02: ensure the 0.18 submission is the one selected.
+The CLI has no select command, so it is a browser action -- and it matters precisely because a worse
+submission (0.14) now exists in the list.

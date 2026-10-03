@@ -1,0 +1,260 @@
+{
+  "agent": "D:\\kaggle\\arc\\agents\\novelty_agent.py",
+  "max_steps": 2000,
+  "overall_score": 0.07020380410147763,
+  "games": {
+    "cd82": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 2001,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        2001,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        55,
+        8,
+        41,
+        21,
+        23,
+        23
+      ]
+    },
+    "g50t": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 2001,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        2001,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        78,
+        175,
+        179,
+        230,
+        96,
+        54,
+        67
+      ]
+    },
+    "lp85": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 2001,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        2001,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        17,
+        38,
+        31,
+        16,
+        41,
+        60,
+        26,
+        159
+      ]
+    },
+    "ls20": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 2001,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        2001,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        22,
+        123,
+        73,
+        84,
+        96,
+        192,
+        186
+      ]
+    },
+    "r11l": {
+      "score": 0.38872691933916426,
+      "levels_completed": 1,
+      "actions": 2001,
+      "level_scores": [
+        8.16326530612245,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        77,
+        1924,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        22,
+        33,
+        51,
+        26,
+        52,
+        49
+      ]
+    },
+    "sb26": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 2001,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        2001,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        18,
+        28,
+        18,
+        19,
+        31,
+        23,
+        58,
+        18
+      ]
+    },
+    "sp80": {
+      "score": 0.16268406241677283,
+      "levels_completed": 1,
+      "actions": 2001,
+      "level_scores": [
+        3.416365310752229,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        211,
+        1790,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        39,
+        58,
+        25,
+        148,
+        96,
+        152
+      ]
+    },
+    "vc33": {
+      "score": 0.010219451055883908,
+      "levels_completed": 2,
+      "actions": 2001,
+      "level_scores": [
+        0.15465219038000252,
+        0.06574621959237344,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        178,
+        702,
+        1121,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        7,
+        18,
+        44,
+        61,
+        131,
+        34,
+        152
+      ]
+    }
+  }
+}

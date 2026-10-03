@@ -1,0 +1,158 @@
+{
+  "agent": "D:\\kaggle\\arc\\agents\\novelty_agent.py",
+  "max_steps": 80,
+  "overall_score": 0.6323077928016199,
+  "games": {
+    "cd82": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 81,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        81,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        55,
+        8,
+        41,
+        21,
+        23,
+        23
+      ]
+    },
+    "ls20": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 81,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        81,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        22,
+        123,
+        73,
+        84,
+        96,
+        192,
+        186
+      ]
+    },
+    "r11l": {
+      "score": 3.1615389640080993,
+      "levels_completed": 1,
+      "actions": 81,
+      "level_scores": [
+        66.39231824417008,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        27,
+        54,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        22,
+        33,
+        51,
+        26,
+        52,
+        49
+      ]
+    },
+    "sp80": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 81,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        81,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        39,
+        58,
+        25,
+        148,
+        96,
+        152
+      ]
+    },
+    "vc33": {
+      "score": 0.0,
+      "levels_completed": 0,
+      "actions": 81,
+      "level_scores": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "level_actions": [
+        81,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "level_baseline_actions": [
+        7,
+        18,
+        44,
+        61,
+        131,
+        34,
+        152
+      ]
+    }
+  }
+}
