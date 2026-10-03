@@ -120,6 +120,13 @@ work/          探针内核的脚本与捕获日志 —— 即结论背后的原
 leaderboard/   三份公榜快照（三个时间戳，CSV）
 ```
 
+⚠️ **脱敏记录**（两处，均为第三方信息，不是我们的）：
+
+1. 三个快照里有 2 位用户的**公榜显示名本身就是邮箱地址**（`kwonj0815@gmail.com`、`macleonjinkan@hotmail.com`，各 3 次，共 6 处），已替换成**同一行的战队 slug**（`kwonj0815gmailcom` / `macleon`）—— 行内其余字段一字未动，信息无损，但不再二次分发他人邮箱。
+2. `work/taaf/preamble.txt` 是从 Kaggle 内核日志里捕获的 harness 配置，其中一条 `local_server_repo_dir` 带了**原作者的本地绝对路径**，已替换为 `<redacted-local-path>`。
+
+**除此之外，这些捕获文件与来源原样一致。** 需要逐字复核的人可以从对应 Kaggle 内核重新拉取。
+
 ### ⛔ 这个仓库里**没有**什么，以及为什么
 
 | 排除项 | 原因 |
