@@ -1,3 +1,14 @@
+> # ⛔ 本页已过时 —— 见 [F47](findings/F47-score-is-22-48-not-0-18.md)
+>
+> **2026-10-06 核实：我们的公榜分数是 22.48、rank 862/3866，不是本页写的 0.18 / 2373。**
+>
+> 那条 **22.48** 是 **2026-10-04 04:11** 提交的（ref `56813776`，**描述字段为空**），
+> 跑的是 `dfranzen/arc-agi-3-milestone-2-solution` 的副本 —— 用的是 **W4A16（int4）** 模型，
+> **不需要 Blackwell**。⇒ 本页"为什么停在这里"整节、以及 F44 的"CLOSED"结论，
+> **都建立在一条已被实测取代的推断上。**
+>
+> 本页以下内容作为**当时**的记录保留，不要当成现状。
+
 # ARC Prize 2026 — ARC-AGI-3 — STATUS (2026-09-30 11:30Z)
 
 Workspace: `D:\kaggle\arc\` (starter at `D:\kaggle\arc\starter\`, competition data at `D:\kaggle\arc\comp\`).
