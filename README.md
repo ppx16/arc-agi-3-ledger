@@ -162,16 +162,41 @@ leaderboard/   三份公榜快照（三个时间戳，CSV）
 
 ## 还剩下什么
 
-1. ⭐ **先在浏览器里验证一件事**（CLI 做不到）：在 Kaggle 编辑器打开 notebook →
-   Settings → Accelerator → **RTX Pro 6000** → Save & Run All，跑一个只打印 `nvidia-smi`
-   的最小 notebook。**在亲眼看到一次 sm_120 的卡之前，F44 的结论不算被推翻、F46 的结论也不算被证实。**
-   （`kaggle kernels pull` 回来的 `machine_shape` 只反映最后一次 API push，与 UI 当前选择无关 —— 见 [kaggle-cli #1196](https://github.com/Kaggle/kaggle-cli/issues/1196)。）
-2. **若第 1 步成立**：F42/F43 里记的公开配方是全的（数据集、模型 ref、harness、服务配置、gateway 细节），
-   且 F44 的闸门 2–5 全部只在 T4 上成立、会**自动消失**（FP8 要 cc≥8.9、flashinfer 要 sm_80+、
-   vLLM 链 CUDA 13 —— 换到 sm_120 都不是问题）。
-3. **若第 1 步不成立**：才回到 F44，走唯一没测过的路 —— 绕开 vLLM 用 `llama.cpp`
+> ### ⭐⭐⭐ 第一步：一次点击，解锁整个高档位（2026-10-06 已把工具准备好）
+>
+> 我建好了一个**探针 notebook**，它只做一件事——打印 `nvidia-smi`、PyTorch 的 CUDA 版本、
+> 以及**计算能力（sm_XX）**，并直接判 `BLACKWELL/RTX-Pro-6000 OK` 还是 `OLD CARD`：
+>
+> **`https://www.kaggle.com/code/ppxl16/arc-agi-3-gpu-probe`**
+>
+> **请在浏览器里**：打开它 → 右侧 **Settings → Accelerator → RTX Pro 6000** →
+> 右上 **Save & Run All**。跑完把输出贴回来（或告诉我结论）。
+>
+> **为什么必须是浏览器**：F46 实测三次（script、notebook 内层 `accelerator`、`--accelerator` 参数，
+> 客户端 2.1.2 与 2.2.2）**全部拿到 2×Tesla T4** —— **CLI push 这条路申请不到现代加速器，
+> 且静默替换、不报错**。编辑器 UI 是唯一入口。
+>
+> **为什么这一步值钱**：顶级公开配方（Tufa Labs 自家、`sirikilohit` 的 v18、`foysalemonshanto`）
+> **全部声明 `NvidiaRtxPro6000` 并用 NVFP4 / FP8 模型**。拿到 sm_120 ⇒ F44 的第 2–5 道闸门
+> （显卡断言、`flashinfer` sm_80+、FP8 cc≥8.9、vLLM CUDA 13）**一次性全部消失**。
+> **我们现在 22.48，榜首 55.89 —— 那 2.48 倍的差距主要就是这一档。**
+>
+> ⚠️ **仍然未知**：编辑器里选的卡**能不能带进"提交-评分复跑"那次运行**（F46 §4）。
+> 探针回答的是"UI 能不能选到现代卡"；**复跑是否继承**是第二个、独立的问题，
+> 要用一次真实提交去测（而平台保留最好成绩 ⇒ **这次测量是免费的**）。
+
+1. **若第 1 步成立**：F42/F43 里记的公开配方是全的（数据集、模型 ref、harness、服务配置、gateway 细节），
+   而 F44 的闸门 2–5 会**自动消失**。
+2. **若第 1 步不成立**：回到 F44，走唯一没测过的路 —— 绕开 vLLM 用 `llama.cpp`
    （TAAF bundle 自带 `configs/inference.local.llama.json`，GGUF Q4 在 Turing 上能跑）。
-4. **`mbmmurad` 那个 "LB 0.86 (3rd place candidate)"** —— 唯一不用 Qwen、不用 Duck 的自称高位作品（Gemma-4 31B），且挂载列表为空。值得弄清是哪个 milestone、什么量纲。
+   ⚠️ 但**注意**：`dfranzen` 那本（W4A16）**已经在推得到的卡上拿到了 22.48**（见 F47），
+   所以"T4 上完全没戏"这个说法本身也是错的。
+3. **`mbmmurad` 那个 "LB 0.86 (3rd place candidate)"** —— 唯一不用 Qwen、不用 Duck 的自称高位作品（Gemma-4 31B），
+   且挂载列表为空。值得弄清是哪个 milestone、什么量纲。
+4. ⚠️ **复制公开 notebook 到本账号目前会被 403 拒绝**（2026-10-06 实测）：不是依赖问题
+   （清空 dataset/model/docker 仍 403）、不是 GPU 额度、不是 notebook 内部残留的 `metadata.kaggle`。
+   最小 script 与最小 notebook **都能正常推** ⇒ **是那些 308–555 KB 内核自身的某个内容**。
+   **未解决**，下次要复制重型公开内核时先解决它。
 
 ---
 
