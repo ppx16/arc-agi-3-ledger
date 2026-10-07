@@ -61,3 +61,27 @@ p = subprocess.Popen(cmd, stdout=fh, stderr=subprocess.STDOUT, env=server_env(),
 
 ⇒ **四道关已过（zstandard → CUDA toolkit → 父进程 numpy → 三个 patch 阶段）**，
 **只剩子进程的环境这一道。** F53 的"每修一道后移一层"继续成立。
+
+---
+
+## 5. 已实施（同日晚些，`kernel-arc-duck18-fix` **v3**）
+
+三处改动，`work/build_duck18_fix.py` 生成，**每处锚点必须恰好匹配一次否则 FATAL**：
+
+| # | 位置 | 改动 |
+|---|---|---|
+| A | cell 10（我 F54 加的 numpy 检查之后） | `os.environ["ARC_NUMPY_ROOT"] = str(Path(_np).parent.parent)` —— 把**父进程解析出的** numpy 根交给子进程 |
+| B | cell 11 的 `sitecustomize.py` 生成串 | 在**那次故意的运行时前置重排之后**，把 `ARC_NUMPY_ROOT` 插回 `sys.path[0]`；并**打印子进程实际看到的 numpy** |
+| C | cell 11 的 `server_env()` | 透传 `"ARC_NUMPY_ROOT": os.environ.get("ARC_NUMPY_ROOT", "")` |
+
+**设计要点**：运行时**仍然**在 `_new` 里靠前（**它的 torch 不能被换掉**），但 **numpy 解析回系统那份**。
+⚠️ **刻意没做**：不改 numpy 版本、不动 torch 的前置 —— 那会把**顺序问题伪装成版本问题**。
+
+**构建时验证（`work/verify_build.py`）**：50 个 cell 全在、**只有 cell 10/11 变化且都变大**、
+`metadata` 逐字相同、**非 source 的 cell 字段零差异**、cell 10 的全部守卫在位。
+
+⚠️ **一处如实记录**：v3 的文件字节数比 v2 **小了约 109 KB**，而内容**增加**了 5026 字符。
+我用逐字节解析核对过**没有丢任何内容**（top-level 键、metadata、outputs、非 source 字段全部一致），
+但**这个体积差的成因我没有查清**，因此写在这里而不是编一个解释。
+**正确性的判据是 `kaggle kernels push` 是否接受 —— 它接受了（version 3）。**
+
