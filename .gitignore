@@ -26,3 +26,10 @@ work/pub_arc/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
+
+# Working scratch (476 MB of downloads, pkl dumps and kernel outputs).  The findings cite it; it is
+# deliberately not redistributed.
+scratch/
+# Third-party notebooks pulled from Kaggle while surveying the field -- their content is summarised in
+# our own words in the findings, the works themselves are not redistributed here.
+work/probe*/

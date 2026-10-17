@@ -1861,6 +1861,17 @@ The next action is not another policy; it is to reproduce the public stack.
 
 ## F43. ⭐⭐⭐ The Duck stack is fully identified — and ⚠️ `machine_shape` is SILENTLY IGNORED
 
+> ⛔⛔ **SUPERSEDED (2026-10-11, see F49 and F62).** The section title's claim -- that
+> `machine_shape` is silently ignored -- is **FALSE as of 2026-10-06**. F49 measured an API-pushed
+> kernel with `machine_shape: NvidiaRtxPro6000` + a competition source **actually receiving an
+> NVIDIA RTX PRO 6000 Blackwell, sm_120, 102 GB**. F50 then found supporting evidence that the
+> SCORING RERUN inherits it too (the same kernel scored 22.48 then 24.53).
+> ⇒ F43.2's hardware wall applies **only to the T4 route**. Keep F43.1 (the recipe) and F43.3
+> (what fits on T4 as a FALLBACK), but **do not use F43.2 to conclude that FP8/NVFP4 are
+> unavailable** -- they are the unlocked high tier.
+> ⚠️ Recorded because on 2026-10-11 this repo trusted F43.2 (10-04) over F48/F49/F50 (10-06/07)
+> and pre-registered a false "doomed" prediction. **Read findings newest-first.**
+
 Written 2026-10-04, after re-reading the project. Supersedes the "wait for the GPU quota on 10-03"
 framing in `STATUS.md`: **quota was never the blocker.**
 
