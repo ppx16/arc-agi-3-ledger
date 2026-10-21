@@ -1,154 +1,76 @@
-> # ⛔ 本页已过时 —— 见 [F47](findings/F47-score-is-22-48-not-0-18.md)
->
-> **2026-10-06 核实：我们的公榜分数是 22.48、rank 862/3866，不是本页写的 0.18 / 2373。**
->
-> 那条 **22.48** 是 **2026-10-04 04:11** 提交的（ref `56813776`，**描述字段为空**），
-> 跑的是 `dfranzen/arc-agi-3-milestone-2-solution` 的副本 —— 用的是 **W4A16（int4）** 模型，
-> **不需要 Blackwell**。⇒ 本页"为什么停在这里"整节、以及 F44 的"CLOSED"结论，
-> **都建立在一条已被实测取代的推断上。**
->
-> 本页以下内容作为**当时**的记录保留，不要当成现状。
+# ARC Prize 2026 — ARC-AGI-3 — STATUS (2026-10-21)
 
-# ARC Prize 2026 — ARC-AGI-3 — STATUS (2026-09-30 11:30Z)
+> This supersedes `STATUS-2026-10-15.md`. The earlier statuses stay as history; this page is the current
+> one screen. Numbers below are server readings, not notebook titles.
 
-Workspace: `D:\kaggle\arc\` (starter at `D:\kaggle\arc\starter\`, competition data at `D:\kaggle\arc\comp\`).
-**Latest: F37/F38 — the 0.08 PROVED the hidden set is not the public 25, and local CV is not a proxy.**
+---
 
-## 🔜 READY TO SUBMIT at 00:00Z: kernel v4, the goose with its per-level learner reset REMOVED
+## 1. Standing
 
-⭐ **The next mechanism bet (F39), and it is structural rather than tuned.** Two measured facts point
-the same way:
+| | rank | score | subs |
+|---|---|---|---|
+| **us** | **827** | **29.34** | 16 |
+| bronze (top 10 %) | 457 | **30.85** | — |
+| silver (top 5 %) | 228 | 32.23 | — |
+| gold | 10 | 43.94 | — |
+| leader | 1 | 68.91 | 169 |
 
-1. **Scoring is PER LEVEL and later levels weigh MORE** — level *i* counts *i* times (F38.2), so the
-   score is in levels 2+.
-2. ⚠️ **The goose discards its entire learner at every level boundary** — `goose_agent.py` lines
-   310–321 call `experience_buffer.clear()`, `experience_hashes.clear()`, and construct a **brand-new
-   randomly initialised `ActionModel` + optimizer**. So level 2 re-pays the full learning cost, even
-   though it is *the same game, harder*.
+**Margin to bronze: −1.51 score, ≈ −370 places.** Deadline **2026-11-02 23:59Z** (12 days).
 
-⇒ `agents/goose_nolevel_cpu.py` keeps the buffer, model and optimizer across a level change. That is
-the **only** difference from the official sample.
+---
+
+## 2. The mechanism, and why it changes the objective
+
+The board records `max over all of a team's submissions` (F80). So the medal probability is
 
 ```
-kernel   ppxl16/arc-prize-2026-arc-agi-3-starter  VERSION 4, enable_gpu FALSE, push had NO error field
-status   COMPLETE  — but the SUBMISSION was REFUSED (HTTP 400): 1 submission/day, next slot 00:00Z
-verify   the intended branch fires on a real level change ("KEPT experience buffer and action model
-         across the level boundary") on r11l and sp80; model is built ONCE ("Built the action model
-         (first level only)")
+P(medal) = 1 - (1 - p)^n ,   p = P(one draw > cut)
 ```
 
-⚠️ **Do not rebuild the notebook before submitting** — `build_notebook.py` re-syncs `enable_gpu=True`
-into the metadata (observed), which would hit the exhausted GPU quota. Submit `kernel_version=4` as
-pushed, or set `enable_gpu` back to `False`.
+**the right tail, not the mean** (F82). A lower-mean agent with a wider spread can be far more likely to
+medal than a higher-mean, tighter one — the left tail costs nothing because only the maximum is kept.
 
-⚠️ **A bug the first build had, worth knowing**: the level-change block is the **only** place upstream
-constructs the model (`__init__` sets it to `None`), so deleting it outright left `action_model = None`
-and **every** `choose_action` raised into the upstream's swallowed `except` — a silent 0.0000 on all 25
-games that looked like a policy result. Caught only by running the file. The transform now asserts the
-constructor appears exactly once.
+## 3. Our distribution (13 draws)
 
-`agents/goose_nolevel.py` (`MAX_ACTIONS = inf`, upstream-faithful, the clean one-variable experiment)
-must wait for the GPU quota to refresh on **2026-10-03**.
+`22.48 24.53 23.67 19.83 23.51 26.41 28.98 27.96 25.72 23.82 27.10 29.34 25.08`
 
-## 🔴 READ THIS FIRST
+mean **25.26**, sd **2.71**, max **29.34**. With the cut at 30.85: `p ≈ 2.0 %` per draw, so the **12
+remaining draws give ≈ 21 %**.
 
+Two of those draws are worth staring at together: **29.34 (10-20) and 25.08 (10-21)** — same kernel, same
+environment, nothing changed. The spread is the sampling.
 
-```
-0.18  official StochasticGoose        generic, learns online, no hand tuning   <-- OUR BEST, still on the board
-0.14  hybrid (planner first, goose)                                           -0.04
-0.08  portfolio of candidate orderings  (local 0.2693!)                       -0.10
-```
+## 4. Every lever we can reach, and why each is closed
 
-**Three submissions, monotonically worse in exactly the order of how much hand-tuning was added.**
-The platform keeps the **best**, so the board still reads **0.18** (`SubmissionCount 3`) — nothing was
-lost. But:
-
-* ⭐ **The 0.08 PROVED the hidden games are NOT the 25 public games.** `portfolio_agent.py` is
-  **deterministic** (no RNG on the portfolio path; re-measured byte-identically before submitting),
-  and a deterministic agent cannot score 0.2693 on a set and 0.08 on that same set. F35's open
-  question is **closed by measurement**.
-* ⇒ **Local CV on the public 25 is NOT a leaderboard proxy.** F24's "it was never a proxy" is true
-  about the METRIC and false about the LEADERBOARD. In the one sample we have it was even
-  **anti-predictive**: the best local score produced the worst hidden score.
-* ⚠️ **~30 configurations were swept on the public 25 to pick that agent.** That sweep was fitting
-  noise by construction. **Stop selecting on the local score.**
-
-## ⭐⭐ The structural fact that governs everything: scoring is PER LEVEL
-
-```
-r11l  total=81  level_actions=[27, 54, 0, ...]  level_scores=[66.4, 0, ...]  baselines=[22, 33, 51, ...]
-tn36  total=81  level_actions=[30, 51, 0, ...]  level_scores=[113.8, 0, ...] baselines=[32, 72, 26, ...]
-```
-
-`27 + 54 = 81` and `100*(22/27)**2 = 66.4` ⇒ **`actions_i` is the spend INSIDE level `i`, not
-cumulative.** So: actions after a level completes are **free**; every level has its **own** budget;
-and **later levels weigh MORE** (level *i* counts *i*).
-
-⇒ **The competition is SEQUENTIAL LEVEL SOLVING, and level 1 — the only level any agent here ever
-completes — is worth the LEAST.** One game solved at human speed through level 2 scores
-`100/21 + 2*100/21 = 14.3`, i.e. **0.57 overall from ONE game**.
-
-## ⚠️ Two "obvious fixes", both measured — one neutral, one HARMFUL
-
-| fix | result |
+| Lever | Status |
 |---|---|
-| **raise the 80-action cap** (the goose uses `inf`) | ⚠️ **CHANGES NOTHING** — 0.1905 / 0.1905 / 0.1905 at caps 80 / 400 / 1200, with total actions rising 2025 → 30025. The agents finish level 1 inside 80 and never finish level 2, and an uncompleted level scores 0, so there is no level the extra actions could add to. **F37.3 was wrong in practice.** |
-| **widen the click space** (goose uses 4096 cells, we use 12–16) | ⚠️ **HARMFUL** — 12 → **0.1905** (2 games), 16 → 0.0722 (1), 48 → **0.0000** (0). With no learner, success falls ~`1/|A|^k`, so widening multiplies the search. The goose affords 4096 coordinates only because it **learns a distribution over them**. |
+| A stronger public agent | **Closed (F85).** Our harness patch and the best public fork's are both 498,799 characters and differ in exactly 11 of them — eight hyphens and three quotes, all inside prompt prose. Same agent; the 29.34 vs 32.60 gap is sampling. |
+| A newer/leaner harness | **Closed (F85).** Same private BYOD image, same two Qwen model datasets, same RTX PRO 6000 as that fork; the "V6 persistent interpreter" it advertises is already in our copy (`persistent` ×30). |
+| Sampling knobs (temperature 0.6 / top_p 0.95 / top_k 20 / seed −1) | **No evidence either way (F83).** Reachable — cell 4 sets environment variables before the analyzer module imports — but "hotter ⇒ fatter right tail" is exactly the kind of plausible-unverified story this project keeps falsifying, and a test costs a draw. |
+| `n_passes` | **Closed (F84).** Set to 4 only in offline Save runs; forced to **1** under `TRUE_SUBMISSION`. Submissions are already single-pass, i.e. already at maximum variance. |
+| Per-game improvements | **Closed for 12 days (F84).** The floor is stable (three games maxed every pass) and the gap is stable (four or five games score near zero every pass) — so the missing points are in games the agent never solves, which needs research, not a parameter. |
+| More than one draw per day | **Impossible.** One per team per UTC day. |
 
-## What is left, without optimism
+**⇒ The remaining 12 draws are the remaining opportunity. Draw, do not change.**
 
-* Our best hidden score is still **0.18**, from the **generic** baseline. Every hand-built deviation
-  scored worse, and both obvious fixes are now measured as neutral/negative.
-* **There is no valid local instrument**, so any further submission is a **mechanism bet**.
-* The two bets with a real argument: **(1) a LEARNER, not a policy** — the goose wins by learning
-  online from the frame-change signal; the exact-transition novelty model computes that same signal
-  without learning and is the one cheap candidate never submitted. **(2) SEQUENTIAL LEVEL SOLVING** —
-  the payoff is in levels 2+, which nothing here has ever completed.
+## 5. The daily action (the entire plan)
 
-## Board / limits
+```powershell
+cd D:\kaggle\arc
+kaggle competitions leaderboard -c arc-prize-2026-arc-agi-3 -d -p D:\kaggle\arc\state\lb
+python work\recon.py
+python work\submit_code.py ppxl16/arc-agi-3-m2-franzen-verbatim 1 "<why, in one paragraph>"
+```
 
-| | |
-|---|---|
-| Competition | ARC-AGI-3, code competition, **$850,000**, deadline **2026-11-02 23:59Z** |
-| Daily submissions | **1** (next slot after 00:00Z) |
-| ⭐ Our board | **Rank 2373 / 3497 · 0.18 · SubmissionCount 3** — the platform scores the BEST, verified twice |
-| Board top / median | **45.33** / **0.32** — top 10 % needs **3.80** |
-| ⚠️ User action before 2026-11-02 | **Ensure the `0.18` submission is the SELECTED one** (browser; the CLI has no `select`) — it now has to be picked out of four |
+- Quota resets at **00:00Z**; one submission per UTC day.
+- ⚠️ The leaderboard must be downloaded into `arc\state\lb\` — `recon.py` reads the old file otherwise (A203).
+- ⚠️ Identify ourselves by `TeamMemberUserNames` containing `ppxl16`; the team name `p pxl16` has a space
+  in it, so a substring search for `ppxl` fails.
+- **Do not miss a day.** Zero days of slack in 12.
 
-⚠️ **A CPU-only kernel push works while the weekly GPU quota is exhausted** (30.45/30.00 h,
-account-wide, refreshing 2026-10-03) — which is how `56705048` shipped at all. Our agents are
-numpy-only (25 games in 12 s) against the goose's 1009 s.
+## 6. What would actually change the plan
 
-## 🛠️ Tooling
-
-| script | what |
-|---|---|
-| `tools/score_local.py` | the shipped scorer against the real baselines — ⚠️ **scores the public 25, which are NOT the hidden games** |
-| `agents/generic_agent.py` | ⭐ the F38 experiment: exact novelty, wide/narrow click prior, configurable cap |
-| `agents/novelty_agent.py` | the F26 walk — 0.1265 local, **never submitted** |
-| `agents/portfolio_agent.py` | the F36 submission (0.08) — kept as the counter-example |
-| `work/probe_motion.py` / `work/probe_avatar.py` | the mechanics map; is a moving sprite trackable? |
-| `work/mk_submission_agent.py` | bake env knobs into a standalone submission (the rerun has no env) |
-| `install_agent.py` → `starter/scripts/build_notebook.py` → `kernels_push` → `competition_submit_code` | the submission path |
-
-⚠️ **Use `OperationMode.OFFLINE`**; pass `data={"x","y"}` to `env.step` for ACTION6 (`set_data` alone is
-only correct through `Agent.do_action_request`). ⚠️ **`env.step` can return a degenerate frame** — never
-answer it with a constant action.
-
-## ⚠️⚠️ Do not read a command's success from TRUNCATED output
-
-**`Select-Object -First N` — and any early-terminating pipeline stage — KILLS the upstream process, so
-PowerShell reports a non-zero exit code.** A truncation therefore looks *exactly* like a real failure.
-Every command in this session was piped through `Select-Object` / `Select-String`, so the exit code was
-never once checked. Two runs that showed a red *"exit code 1"* were re-run with output redirected to a
-file — `work/inspect_ckpt.py` and `scripts/lb_ceiling.py` — and both returned **0 with empty stderr**;
-the red was the pipe, not the command.
-
-**The rule from here on:**
-1. Redirect to a file and read the file (`cmd > out.txt 2> err.txt`); do not truncate the pipeline.
-2. **Print `$LASTEXITCODE` explicitly** and say what it was, in the same message as the conclusion.
-3. Read stderr even when stdout looks right, and prefer a **reproducibility check** (run twice, diff)
-   over eyeballing — `inspect_ckpt.py`'s output was confirmed bit-identical across two runs.
-4. This is the same bug class as the failed import, the dropped `ACTION6` coordinate and the refused
-   `kernels_push`: **a silently-swallowed failure reported as success**, one level up.
-
+Not a notebook with a higher `bestPublicScore` — those are maxima over unknown numbers of runs (F81).
+Only one thing would justify switching kernels: **evidence about a kernel's distribution**, i.e. several
+draws of the same alternative under the same conditions. Until that exists, switching is a coin flip paid
+for with the scarcest resource we have.
