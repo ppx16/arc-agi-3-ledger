@@ -30,12 +30,16 @@ P(medal) = 1 - (1 - p)^n ,   p = P(one draw > cut)
 **the right tail, not the mean** (F82). A lower-mean agent with a wider spread can be far more likely to
 medal than a higher-mean, tighter one — the left tail costs nothing because only the maximum is kept.
 
-## 3. Our distribution (13 draws)
+## 3. Our distribution (14 draws, one of them a failure)
 
-`22.48 24.53 23.67 19.83 23.51 26.41 28.98 27.96 25.72 23.82 27.10 29.34 25.08`
+`22.48 24.53 23.67 19.83 23.51 26.41 28.98 27.96 25.72 23.82 27.10 29.34 25.08` … then **0.00**
 
-mean **25.26**, sd **2.71**, max **29.34**. With the cut at 30.85: `p ≈ 2.0 %` per draw, so the **12
-remaining draws give ≈ 21 %**.
+⚠️ The 2026-10-22 draw is a **failed rerun, not a bad game** (F86). It costs nothing to the score, because
+the board keeps the maximum, but it costs a **whole day of budget**: eleven draws remain and the expected
+number of *successful* ones is about **10.2**.
+
+mean **25.26**, sd **2.71**, max **29.34** (computed on the thirteen that produced a score). With the cut at
+30.85: `p ≈ 2.0 %` per draw, so the **remaining draws give ≈ 18–19 %**.
 
 Two of those draws are worth staring at together: **29.34 (10-20) and 25.08 (10-21)** — same kernel, same
 environment, nothing changed. The spread is the sampling.
