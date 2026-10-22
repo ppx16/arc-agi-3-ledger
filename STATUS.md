@@ -63,6 +63,9 @@ python work\submit_code.py ppxl16/arc-agi-3-m2-franzen-verbatim 1 "<why, in one 
 ```
 
 - Quota resets at **00:00Z**; one submission per UTC day.
+- ⚠️ **The `1` in that command is the kernel VERSION, and it must stay `1`.** `submit_code.py` takes
+  `<slug> <version> <message>` and sets `req.kernel_version` explicitly, so every draw we have made used the
+  same pinned version — the code F85 inspected. Changing that number silently changes what is being drawn.
 - ⚠️ The leaderboard must be downloaded into `arc\state\lb\` — `recon.py` reads the old file otherwise (A203).
 - ⚠️ Identify ourselves by `TeamMemberUserNames` containing `ppxl16`; the team name `p pxl16` has a space
   in it, so a substring search for `ppxl` fails.
