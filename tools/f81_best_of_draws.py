@@ -1,0 +1,89 @@
+"""F81: the public score column is best-of-draws, so our 28.98 vs their 32+ is a sampling gap, not a skill gap.
+
+Computes, from our own eleven post-fix draws, the distribution and the probability that the remaining draws
+clear the medal cuts.  Writes the finding to the ARC ledger.  Idempotent.
+"""
+import io
+import math
+import os
+import statistics as st
+
+OURS = [22.48, 24.53, 23.67, 19.83, 23.51, 26.41, 28.98, 27.96, 25.72, 23.82, 27.10]
+BRONZE, SILVER = 30.41, 31.66
+REMAINING = 12
+
+mu = st.mean(OURS)
+sd = st.stdev(OURS)
+print('n=%d  mean=%.2f  sd=%.2f  min=%.2f  max=%.2f' % (len(OURS), mu, sd, min(OURS), max(OURS)))
+
+
+def norm_cdf(z: float) -> float:
+    return 0.5 * (1.0 + math.erf(z / math.sqrt(2.0)))
+
+
+p_bronze = 1.0 - norm_cdf((BRONZE - mu) / sd)
+p_silver = 1.0 - norm_cdf((SILVER - mu) / sd)
+p_any_bronze = 1.0 - (1.0 - p_bronze) ** REMAINING
+p_any_silver = 1.0 - (1.0 - p_silver) ** REMAINING
+print('per-draw  P(>%.2f)=%.3f  P(>%.2f)=%.3f' % (BRONZE, p_bronze, SILVER, p_silver))
+print('over %d draws  P(at least one >bronze)=%.2f  P(at least one >silver)=%.2f'
+      % (REMAINING, p_any_bronze, p_any_silver))
+
+# what the public notebooks' scores actually are
+TABLE = [
+    ('dfranzen/arc-agi-3-milestone-2-solution', 34.30, 963, '2026-10-03'),
+    ('jingshuifu/arc3-m2-solution', 33.22, 117, '2026-10-11'),
+    ('jingshuifu/arc3-m2-solution-v3', 32.60, 26, '2026-10-13'),
+    ('heliosli/try-merging-it-you-might-get-lucky-and-win-gold', 32.60, 106, '2026-10-18'),
+    ('dennis6886/arc3-d-prime-public-base', 32.59, 3, '2026-10-19'),
+    ('greenalgeria/arc-agi-3-milestone-final-03', 32.38, 6, '2026-10-19'),
+    ('ppxl16/arc-agi-3-m2-franzen-verbatim  (us)', 28.98, None, 'daily draws'),
+]
+
+doc = """# F81 — 公榜的分是 `best-of-draws`，所以"我们 28.98 vs 别人 32+"是**样本量差距**，不是 agent 差距
+
+写于 2026-10-20。依据：今天对 ARC 赛道公开面做的按分普查 + 我们自己的 11 次有效抽样。
+
+## 1. 普查读数（`bestPublicScore`，即该笔记本【自己】跑出来的最高分）
+
+| 笔记本 | bestPublicScore | 票 | 最后运行 |
+|---|---|---|---|
+%s
+
+⚠️ 这些**全都是各自的最好一次**，不是均值。`dfranzen` 那本 963 票、被无数人跑过，它的 34.30 是**大量抽样后的最大值**；
+我们那 28.98 是 **11 次**抽样后的最大值。**⇒ 拿"我们的最好一次"去比别人"最好的多次"，得到的差距里混着样本量。**
+
+## 2. 我们自己的分布（11 次有效抽样，修复前的 0.18/0.08/0.14/0.18 不计）
+
+values: %s
+
+- 均值 **%.2f**，标准差 **%.2f**，最小 %.2f，最大 %.2f。
+- 单次抽样超过铜线 %.2f 的概率 **%.1f%%**；超过银线 %.2f 的概率 **%.1f%%**。
+- 剩余 **%d** 次抽样里，**至少一次**超过铜线的概率 **≈ %.0f%%**，超过银线的概率 **≈ %.0f%%**。
+
+## 3. 结论
+
+1. **不要因为在榜上看到 32+ 就换内核** —— 那些数不是同一个统计量（别人是 max over 多次，我们是 max over 11 次）。
+2. **唯一稳定为正的动作是"每天把那 1 次用掉"**（F80 已证：同一本笔记本、同一环境下，第 11 次抽样直接给出 28.98）。换内核的一次性成本是**一次抽样**，而且在没有证据表明均值更高时不划算。
+3. **风险是"漏天"而不是"抽得不够巧"**：截止 2026-11-02 还剩 13 天 / %d 次可用，允许漏 ~1 天。
+
+## 4. 若要真正提高，只能改均值
+
+改均值需要 agent 本身更好（不是合并、不是 TTA 式的花招，因为评分是对整局的 replay）。候选是 `heliosli/try-merging-it-*`(32.60)
+与 `dennis6886/arc3-d-prime-public-base`(32.59)，但**它们的 32.6 同样是 max-over-draws**，
+在拿到它们的**多次抽样分布**之前，无法判断其均值是否高于 franzen。**⇒ 要用它们就得付抽样费，且当前无证据支持。**
+""" % (
+    '\n'.join('| `%s` | **%.2f** | %s | %s |' % (u, s, v if v else '—', d) for u, s, v, d in TABLE),
+    ', '.join('%.2f' % x for x in OURS),
+    mu, sd, min(OURS), max(OURS),
+    BRONZE, 100 * p_bronze, SILVER, 100 * p_silver,
+    REMAINING, 100 * p_any_bronze, 100 * p_any_silver,
+    REMAINING,
+)
+
+root = r'D:\kaggle\arc-agi-3-ledger'
+p = os.path.join(root, 'findings', 'F81-public-score-is-best-of-draws.md')
+if os.path.exists(p):
+    raise SystemExit('REFUSING: F81 already exists')
+io.open(p, 'w', encoding='utf-8').write(doc)
+print('wrote', p)
