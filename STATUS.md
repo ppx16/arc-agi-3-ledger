@@ -53,7 +53,10 @@ environment, nothing changed. The spread is the sampling.
 | Sampling knobs (temperature 0.6 / top_p 0.95 / top_k 20 / seed −1) | **No evidence either way (F83).** Reachable — cell 4 sets environment variables before the analyzer module imports — but "hotter ⇒ fatter right tail" is exactly the kind of plausible-unverified story this project keeps falsifying, and a test costs a draw. |
 | `n_passes` | **Closed (F84).** Set to 4 only in offline Save runs; forced to **1** under `TRUE_SUBMISSION`. Submissions are already single-pass, i.e. already at maximum variance. |
 | Per-game improvements | **Closed for 12 days (F84).** The floor is stable (three games maxed every pass) and the gap is stable (four or five games score near zero every pass) — so the missing points are in games the agent never solves, which needs research, not a parameter. |
+| **A free instrument to A/B changes on** | **Closed by measurement (F90).** The offline benchmark looked like one: 25 games × 4 passes, no draw cost. It failed its own repeat test — the *same notebook* scored **58.46** on 10-13 and **47.22** on 10-22, with per-pass spread inflating from 2.92 to 32.11 because one pass produced nothing. An instrument that repeats to ±11 points cannot resolve a change worth a few. **This is the first research direction this project stopped before spending on it rather than after.** |
 | More than one draw per day | **Impossible.** One per team per UTC day. |
+
+⚠️ **And failures are bimodal, not graded** (F90): one pass in eight produced exactly `0.00` while the others sat between 54 and 70, the same catastrophic mode as the live zero on 2026-10-22 (F86). So the variance is discrete, averaging more passes would not remove it, and a single live draw can burn a day for nothing.
 
 **⇒ The remaining 12 draws are the remaining opportunity. Draw, do not change.**
 
