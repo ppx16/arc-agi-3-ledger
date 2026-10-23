@@ -1,0 +1,10 @@
+﻿2026-10-23T01:35:35Z  GLOBAL WATCH START (every 2h, read-only)
+2026-10-23T01:35:39Z  ARC  bronze top10% rank  457 -> 30.85
+2026-10-23T01:35:39Z  ARC  silver top5%  rank  228 -> 32.23
+2026-10-23T01:35:39Z  ARC  US: rank 827  score 29.34  subs 16  last 2026-10-20 00:56:47
+2026-10-23T01:35:39Z  ARC  bronze needs rank <= 457 (score 30.85) -> margin -370 ranks, +1.51 score
+2026-10-23T01:35:39Z  ARC  57544435  2026-10-23 01:24:51  SubmissionStatus.PENDING
+2026-10-23T01:35:39Z  ARC  19 submissions; best public score = 29.34
+2026-10-23T01:35:41Z  KERN ppxl16/arc-agi-3-m2-franzen-verbatim has status "KernelWorkerStatus.COMPLETE"
+2026-10-23T01:35:44Z  KERN ppxl16/arc-pri-dprime has status "KernelWorkerStatus.RUNNING"
+2026-10-23T01:35:47Z  QUOTA used_today=1 of 1   latest=57544435 pending
