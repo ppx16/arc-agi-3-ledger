@@ -58,3 +58,20 @@ harness patch 里有一个 `_memory_sections_disabled()`，它的 docstring 逐�
 - ≥ 30.88（铜线）⇒ 立即扶正，剩余全用;
 - 29.34 ~ 30.87 ⇒ 与最好持平，**不算成功**（因为 sd 2.7 内无法与抽样区分），退回原版;
 - ≤ 27 或 0.00 ⇒ 关闭这条轴，剩余只抽不改。
+
+---
+
+## 6. ⚠️ 侦察结果对本文的修正（2026-10-24，recon 交付）
+
+econ 普查了 **27 本 ≥30 分的公开笔记本**（rc/recon/RECON.md），结论对本文有三处修正：
+
+1. **"没人开"是事实**：**0/27** 本开启 ARC3_MEMORY_SECTIONS（25 本显式 off，2 本不用 setup_env）。
+2. **但"没人想到"是错的**：我们 patch 里 _memory_section_labels() 的 docstring **记录了 25 局的 section 写入频次**
+   —— World model 351 次、Plan 255、Open questions 25、Action model 10、Goal model 9、
+   **Cross-level notes 0**，并说明被丢的正是"写一次就不再更新却被当现状 re-inject"的陈旧项。
+   ⇒ **off 更像是【试过、量过、主动关掉】，而不是遗漏。** 这条把我的先验从"弱正"降到"未知偏负"。
+3. 另有 6 个 WM 相关 knob（ARC3_WM_WIPE_ON_LEVEL / WM_WIPE_ON_GAME_OVER / WM_REVISE_NUDGES /
+   WM_REBUILD_NUDGE / WM_NUDGE_TURNS / MEMORY_SECTION_MAX_CHARS）**我们的 patch 全支持、只是 setup_env 没列**
+   ⇒ 要试是**纯 knob 实验**（不插代码），风险低于 F92 那种补丁。
+
+**⇒ 本文第 5 节的排序因此下调**：slim 不再是首选，让位给 F94 的**模式判定修复**（那条直接保护剩余抽样）。
