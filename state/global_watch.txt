@@ -11,3 +11,5 @@
 2026-10-24T02:23:17Z  SCHED tick (2h reminder delivered late, 13h gap)
 2026-10-24T02:23:17Z  QUOTA 2026-10-24 used 0 -> submitted 57579559 (pri-dprime v1)
 2026-10-24T02:23:17Z  ARC us rank 868 score 29.34 | bronze 473 -> 30.88 (margin -395 ranks, +1.54)
+2026-10-24T02:55:59Z  FAIL 57579559 = 0.00 in 33min (rerun crashed; Save run was COMPLETE -> F92)
+2026-10-24T02:55:59Z  PLAN remaining 8 draws all on version 1; pri-dprime abandoned; schedule prompt updated
